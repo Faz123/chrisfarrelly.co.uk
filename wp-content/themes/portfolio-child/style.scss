@@ -9,3 +9,52 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: chrisfarrelly-co-uk
 Template: astra
 */
+// theme colours
+$colour-1: rgb(47, 193, 255);
+$colour-2: rgb(8, 172, 242);
+$colour-3: rgb(16, 18, 24);
+$colour-4: rgb(76, 82, 83);
+$colour-5: rgb(243, 246, 246);
+$colour-6: rgb(75, 79, 88);
+$colour-7: rgb(246, 247, 248);
+$white: rgb(243, 246, 246);
+$black: rgb(0, 0, 0);
+
+.list-margin {
+  padding: 0;
+  margin-left: 1em;
+}
+
+.home {
+  .my-services {
+    text-align: center;
+    .wp-block-column {
+      i {
+        color: $colour-1;
+        font-size: 2em;
+        margin-bottom: 12px;
+      }
+    }
+  }
+  .about-me {
+    .wp-block-media-text {
+      padding: 1em;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 7px 7px 7px 7px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    div.wp-block-cover.alignfull.website-header {
+      & > img {
+        object-position: left !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+}

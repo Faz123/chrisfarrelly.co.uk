@@ -30,6 +30,7 @@ add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
 // add custom scripts
 function add_custom_scripts() {
 	wp_enqueue_script('scripts', THEME_PATH . '/js/scripts.js' );
+	wp_enqueue_script('jquery');
 	wp_enqueue_script('owlcarousel', THEME_PATH . '/owlcarousel/owl.carousel.min.js' );
 }
 add_action('wp_enqueue_scripts', 'add_custom_scripts', 20);
