@@ -11,10 +11,13 @@ wp-content/mu-plugins/
 wp-content/wp-cache-config.php
 wp-content/plugins/hello.php
 .vscode
-
+wp-content/themes/portfolio-child/inc/
+wp-content/themes/portfolio-child/js/
+wp-content/themes/portfolio-child/template-parts/
 /.htaccess
 /license.txt
 /readme.html
 /sitemap.xml
 /sitemap.xml.gz
+
 

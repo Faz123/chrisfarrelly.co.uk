@@ -20,15 +20,41 @@ $colour-7: rgb(246, 247, 248);
 $white: rgb(243, 246, 246);
 $black: rgb(0, 0, 0);
 
+//fontawesome
+$fontAwesome: "Font Awesome 5 Free";
+
+.pt-1 {
+  padding-top: 1em;
+}
 .list-margin {
   padding: 0;
   margin-left: 1em;
 }
 
-.home {
+.wpforms-container {
+  input.wpforms-field-medium {
+    margin-top: 10px;
+    border-radius: 50px;
+  }
+  textarea.wpforms-field-medium {
+    border-radius: 20px;
+    margin-top: 10px;
+  }
+}
+
+//menu
+
+.site-navigation {
+}
+
+.home,
+.page {
   .my-services {
     text-align: center;
     .wp-block-column {
+      padding: 1em;
+      border-radius: 12px;
+      box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.2);
       i {
         color: $colour-1;
         font-size: 2em;
@@ -42,6 +68,158 @@ $black: rgb(0, 0, 0);
       background: white;
       border-radius: 12px;
       box-shadow: 7px 7px 7px 7px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.wp-block-cover,
+.wp-block-cover-image {
+  padding: 2em;
+}
+
+//blog
+
+//archive
+.ast-separate-container {
+  .ast-article-post {
+    margin-bottom: 1em;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.2);
+    padding: 2em;
+    .post-content {
+      .post-thumb {
+        overflow: hidden;
+        a {
+          img {
+            transition: 0.3s ease-in all;
+            transform: scale(1);
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+      .entry-header {
+        .entry-title {
+          a {
+            transition: 0.3s ease-in all;
+            text-decoration: underline;
+            &:hover {
+              color: $colour-2;
+            }
+          }
+        }
+      }
+    }
+    .posted-on {
+      &::after {
+        content: "📅";
+        margin-left: 6px;
+      }
+    }
+    .cat-links {
+      &::after {
+        content: "📚";
+        margin-left: 6px;
+      }
+    }
+    .posted-by {
+      &::after {
+        content: "🙎‍♂️";
+        margin-left: 6px;
+      }
+    }
+  }
+  .read-more {
+    a {
+      padding: 12px;
+      background-color: $colour-2;
+      color: $white;
+      border-radius: 25px;
+      &:hover {
+        background-color: darken($colour-2, 30%);
+      }
+      &::after {
+        font-family: $fontAwesome;
+        content: "\f054";
+        font-weight: 700;
+        margin-left: 6px;
+      }
+    }
+  }
+}
+
+.widget-area {
+  .sidebar-main {
+    aside {
+      border-radius: 12px;
+      box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.2);
+      a::after {
+        font-family: $fontAwesome;
+        content: "\f054";
+        font-weight: 700;
+        margin-left: 6px;
+      }
+    }
+  }
+}
+//post
+.single-post {
+  a {
+    color: $colour-1;
+    text-decoration: underline;
+  }
+  .entry-header {
+    margin-top: 2em;
+  }
+  .post-thumb {
+    img {
+      width: 100%;
+    }
+  }
+  .ast-single-post-order {
+    .entry-title {
+      font-size: 3em;
+    }
+    .entry-meta {
+      .comments-link {
+        &::after {
+          content: "📣";
+        }
+      }
+      .cat-links {
+        &::after {
+          content: "📚";
+          margin-left: 6px;
+        }
+      }
+      .posted-by {
+        &::after {
+          content: "🙎‍♂️";
+          margin-left: 6px;
+        }
+      }
+      .posted-on {
+        &::after {
+          content: "📅";
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+
+  .comment-form {
+    margin-bottom: 2em;
+    .comment-form-cookies-consent {
+      display: inline-block;
+    }
+  }
+}
+
+@media only screen and (max-width: 544px) {
+  .single-post {
+    .wp-block-group {
+      padding: 2em 0;
     }
   }
 }

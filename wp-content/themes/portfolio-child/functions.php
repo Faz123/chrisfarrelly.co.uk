@@ -34,3 +34,32 @@ function add_custom_scripts() {
 	wp_enqueue_script('owlcarousel', THEME_PATH . '/owlcarousel/owl.carousel.min.js' );
 }
 add_action('wp_enqueue_scripts', 'add_custom_scripts', 20);
+
+
+//add blog text
+
+function blog_text() {
+	if(is_home()) {
+		?>
+<div class="wp-block-group alignfull about-me has-ast-global-color-2-background-color has-background">
+    <div class="ast-container pt-1">
+        <h1 class="has-white-color">My Blog</h1>
+        <p class="pt-1 has-white-color">The Chris Farrelly Digital blog will cover lots of different aspects of web
+            design, marketing, SEO and the developer life in general as I see it.</p>
+        <p class="has-white-color">I intend to write about my project development experiences, marketing ideas and my
+            personal experience of
+            transitioning into tech via self teaching and Open University Study.</p>
+    </div>
+
+</div>
+
+<?php
+	}
+}
+add_action('astra_content_before', 'blog_text' , 10);
+
+function astra_post_read_more() {
+    return __( 'Read More', 'astra' );
+}
+
+add_filter( 'astra_post_read_more', 'astra_post_read_more' );

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
 Theme Name: chrisfarrelly.co.uk
 Author: Chris Farrelly
@@ -9,27 +10,187 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: chrisfarrelly-co-uk
 Template: astra
 */
+.pt-1 {
+  padding-top: 1em;
+}
+
 .list-margin {
   padding: 0;
   margin-left: 1em;
 }
 
-.home .my-services {
+.wpforms-container input.wpforms-field-medium {
+  margin-top: 10px;
+  border-radius: 50px;
+}
+
+.wpforms-container textarea.wpforms-field-medium {
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.home .my-services,
+.page .my-services {
   text-align: center;
 }
 
-.home .my-services .wp-block-column i {
+.home .my-services .wp-block-column,
+.page .my-services .wp-block-column {
+  padding: 1em;
+  border-radius: 12px;
+  -webkit-box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.2);
+}
+
+.home .my-services .wp-block-column i,
+.page .my-services .wp-block-column i {
   color: #2fc1ff;
   font-size: 2em;
   margin-bottom: 12px;
 }
 
-.home .about-me .wp-block-media-text {
+.home .about-me .wp-block-media-text,
+.page .about-me .wp-block-media-text {
   padding: 1em;
   background: white;
   border-radius: 12px;
   -webkit-box-shadow: 7px 7px 7px 7px rgba(0, 0, 0, 0.2);
           box-shadow: 7px 7px 7px 7px rgba(0, 0, 0, 0.2);
+}
+
+.wp-block-cover,
+.wp-block-cover-image {
+  padding: 2em;
+}
+
+.ast-separate-container .ast-article-post {
+  margin-bottom: 1em;
+  border-radius: 12px;
+  -webkit-box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.2);
+  padding: 2em;
+}
+
+.ast-separate-container .ast-article-post .post-content .post-thumb {
+  overflow: hidden;
+}
+
+.ast-separate-container .ast-article-post .post-content .post-thumb a img {
+  -webkit-transition: 0.3s ease-in all;
+  transition: 0.3s ease-in all;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.ast-separate-container .ast-article-post .post-content .post-thumb a img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.ast-separate-container .ast-article-post .post-content .entry-header .entry-title a {
+  -webkit-transition: 0.3s ease-in all;
+  transition: 0.3s ease-in all;
+  text-decoration: underline;
+}
+
+.ast-separate-container .ast-article-post .post-content .entry-header .entry-title a:hover {
+  color: #08acf2;
+}
+
+.ast-separate-container .ast-article-post .posted-on::after {
+  content: "📅";
+  margin-left: 6px;
+}
+
+.ast-separate-container .ast-article-post .cat-links::after {
+  content: "📚";
+  margin-left: 6px;
+}
+
+.ast-separate-container .ast-article-post .posted-by::after {
+  content: "🙎‍♂️";
+  margin-left: 6px;
+}
+
+.ast-separate-container .read-more a {
+  padding: 12px;
+  background-color: #08acf2;
+  color: #f3f6f6;
+  border-radius: 25px;
+}
+
+.ast-separate-container .read-more a:hover {
+  background-color: #03435e;
+}
+
+.ast-separate-container .read-more a::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+.widget-area .sidebar-main aside {
+  border-radius: 12px;
+  -webkit-box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.2);
+}
+
+.widget-area .sidebar-main aside a::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+.single-post a {
+  color: #2fc1ff;
+  text-decoration: underline;
+}
+
+.single-post .entry-header {
+  margin-top: 2em;
+}
+
+.single-post .post-thumb img {
+  width: 100%;
+}
+
+.single-post .ast-single-post-order .entry-title {
+  font-size: 3em;
+}
+
+.single-post .ast-single-post-order .entry-meta .comments-link::after {
+  content: "📣";
+}
+
+.single-post .ast-single-post-order .entry-meta .cat-links::after {
+  content: "📚";
+  margin-left: 6px;
+}
+
+.single-post .ast-single-post-order .entry-meta .posted-by::after {
+  content: "🙎‍♂️";
+  margin-left: 6px;
+}
+
+.single-post .ast-single-post-order .entry-meta .posted-on::after {
+  content: "📅";
+  margin-left: 6px;
+}
+
+.single-post .comment-form {
+  margin-bottom: 2em;
+}
+
+.single-post .comment-form .comment-form-cookies-consent {
+  display: inline-block;
+}
+
+@media only screen and (max-width: 544px) {
+  .single-post .wp-block-group {
+    padding: 2em 0;
+  }
 }
 
 @media only screen and (max-width: 768px) {
