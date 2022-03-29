@@ -165,6 +165,17 @@ $fontAwesome: "Font Awesome 5 Free";
 }
 //post
 .single-post {
+  .entry-content {
+    .read-time {
+      padding: 0.5em;
+      margin: 0;
+      border-radius: 12px;
+      p {
+        margin: 0;
+        color: black;
+      }
+    }
+  }
   a {
     color: $colour-1;
     text-decoration: underline;
@@ -222,6 +233,16 @@ $fontAwesome: "Font Awesome 5 Free";
       padding: 2em 0;
     }
   }
+
+  .blog.ast-separate-container {
+    #content {
+      .ast-container {
+        padding-left: 0.54em;
+        padding-right: 0.54em;
+        padding: 2em;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -229,6 +250,14 @@ $fontAwesome: "Font Awesome 5 Free";
     div.wp-block-cover.alignfull.website-header {
       & > img {
         object-position: left !important;
+      }
+    }
+  }
+
+  .single-post {
+    .ast-single-post-order {
+      h1.entry-title {
+        font-size: 2em;
       }
     }
   }

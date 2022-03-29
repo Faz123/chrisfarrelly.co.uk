@@ -143,6 +143,17 @@ Template: astra
   margin-left: 6px;
 }
 
+.single-post .entry-content .read-time {
+  padding: 0.5em;
+  margin: 0;
+  border-radius: 12px;
+}
+
+.single-post .entry-content .read-time p {
+  margin: 0;
+  color: black;
+}
+
 .single-post a {
   color: #2fc1ff;
   text-decoration: underline;
@@ -191,11 +202,19 @@ Template: astra
   .single-post .wp-block-group {
     padding: 2em 0;
   }
+  .blog.ast-separate-container #content .ast-container {
+    padding-left: 0.54em;
+    padding-right: 0.54em;
+    padding: 2em;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   .home div.wp-block-cover.alignfull.website-header > img {
     -o-object-position: left !important;
        object-position: left !important;
+  }
+  .single-post .ast-single-post-order h1.entry-title {
+    font-size: 2em;
   }
 }

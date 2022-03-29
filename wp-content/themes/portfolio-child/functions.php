@@ -29,9 +29,9 @@ add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
 
 // add custom scripts
 function add_custom_scripts() {
-	wp_enqueue_script('scripts', THEME_PATH . '/js/scripts.js' );
+	wp_enqueue_script('scripts', THEME_PATH . '/js/scripts.js', null, null, true  );
 	wp_enqueue_script('jquery');
-	wp_enqueue_script('owlcarousel', THEME_PATH . '/owlcarousel/owl.carousel.min.js' );
+	wp_enqueue_script('owlcarousel', THEME_PATH . '/owlcarousel/owl.carousel.min.js');
 }
 add_action('wp_enqueue_scripts', 'add_custom_scripts', 20);
 
@@ -42,7 +42,7 @@ function blog_text() {
 	if(is_home()) {
 		?>
 <div class="wp-block-group alignfull about-me has-ast-global-color-2-background-color has-background">
-    <div class="ast-container pt-1">
+    <div class="wp-block-cover__inner-container pt-1">
         <h1 class="has-white-color">My Blog</h1>
         <p class="pt-1 has-white-color">The Chris Farrelly Digital blog will cover lots of different aspects of web
             design, marketing, SEO and the developer life in general as I see it.</p>
@@ -63,3 +63,17 @@ function astra_post_read_more() {
 }
 
 add_filter( 'astra_post_read_more', 'astra_post_read_more' );
+
+//Add estimated read time
+
+function estimated_read_time() {
+	if(is_single()) {
+		//Most people read between 200 - 300 words per minute so lets go for a safe bet of 250
+		$average = 250;
+		$wordCount = str_word_count(wp_strip_all_tags(get_the_content()));
+		$readingTime = $wordCount/$average;
+		echo '<div class="read-time"><p>' . '<span id="readTime" data-time="' .round($readingTime) .'">0</span>' . ' minute read'  . '</p></div>';
+	}
+}
+
+add_action('astra_entry_content_before', 'estimated_read_time', 20);
