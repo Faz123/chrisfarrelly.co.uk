@@ -29,6 +29,11 @@ Template: astra
   margin-top: 10px;
 }
 
+.wpforms-container select.wpforms-field-medium {
+  border-radius: 50px;
+  margin-top: 10px;
+}
+
 .home .my-services,
 .page .my-services {
   text-align: center;
@@ -198,6 +203,26 @@ Template: astra
   display: inline-block;
 }
 
+.blog-latest .wp-block-latest-posts li {
+  margin-bottom: 1em;
+}
+
+.blog-latest .wp-block-latest-posts li > a {
+  font-weight: 800;
+}
+
+.blog-latest .wp-block-latest-posts li > a::before {
+  content: "📰";
+  margin-right: 6px;
+}
+
+.blog-latest .wp-block-latest-posts li p.read-more a::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  font-weight: 700;
+  margin-left: 6px;
+}
+
 @media only screen and (max-width: 544px) {
   .single-post .wp-block-group {
     padding: 2em 0;
@@ -216,5 +241,12 @@ Template: astra
   }
   .single-post .ast-single-post-order h1.entry-title {
     font-size: 2em;
+  }
+  .blog-latest .wp-block-latest-posts li {
+    margin-bottom: 1em;
+  }
+  .blog-latest .wp-block-latest-posts li > a {
+    margin: 1em 0;
+    display: inline-block;
   }
 }
